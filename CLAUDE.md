@@ -16,9 +16,16 @@ distros de l'équipe. Le QG est cloné dans `$KOA_QG`, le projet dans `~/projet`
 une branche par mission, une tête se désigne par son SHA complet, une revue se fait sur
 `git diff <base>...<sha>`, et l'orchestrateur fusionne sur `main` par `git merge --ff-only` ou `--no-ff`.
 
+**Au QG aussi, seul l'orchestrateur pousse sur `main`.** Un autre rôle qui y écrit — sa clôture, sa capitalisation —
+pousse une branche courte (`capitalisation/<rôle>-<AAAAMMJJ-HHMM>`), que l'orchestrateur relit et fusionne : c'est
+la PR de `/koa:clore`, sans forge à PR. À la recette du 19/10/2026, deux clôtures parallèles ont fait l'une un push
+direct sur `main`, l'autre une branche.
+
 ## Environnements
 
-Aucun. Rien ne se déploie depuis ce cluster.
+Rien ne se déploie depuis ce cluster. Les distros de l'équipe sont des Debian minimales : `python3` (pas de
+`python`), `pytest`, `venv`, `make`, `git` ; ni `docker`, ni `gh`. Un fait d'environnement appris en chantier
+s'écrit **ici**, une fois pour l'équipe — pas dans la page de chaque rôle.
 
 ## Interdits
 
